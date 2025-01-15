@@ -1,12 +1,16 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import html from '@rollup/plugin-html';
-// https://vite.dev/config/
+
 export default defineConfig({
-  server: {
-    port: process.env.PORT || 4173,  // Use the PORT from Heroku, fallback to 4173 for local development
-    host: '0.0.0.0',  // Ensure the app binds to all available network interfaces
+  base: "./", // Ensures relative paths for assets
+  build: {
+    outDir: "dist", // Directory where the built files will go
   },
-  root: './',
+  server: {
+    port: 3000, // Default development server port
+    strictPort: true, // Ensures the port is used (Heroku assigns a random one)
+  },
   plugins: [react()],
 })
+
+
