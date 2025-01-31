@@ -1,6 +1,6 @@
 import React from 'react'
 import HTML from '../assets/html.png'
-import MoneyCorp from '../assets/MoneyCorp.svg'
+import MoneyCorp from '../assets/moneycorp.svg'
 import Nomura from '../assets/Nomura.svg'
 import StateStreet from '../assets/Statestreet.svg'
 
