@@ -24,11 +24,18 @@ const Contact = () => {
     }
 
     try {
-
       // Send form data to the backend using axios
-      const response = await axios.post('http://localhost:3000/contact', { name, email, message });
-
-
+      axios.post('http://localhost:5000/', {
+        name: 'John pilkritson',
+        email: 'john@example.com',
+        message: 'Hello, this is a message.'
+      })
+      .then(response => {
+        console.log('Success:', response.data);
+      })
+      .catch(error => {
+        console.error('Error:', error.response ? error.response.data : error.message);
+      });
       // If successful, reset the form and show success message
       setName('');
       setEmail('');
@@ -39,7 +46,6 @@ const Contact = () => {
       setStatus('Error sending message. Please try again later.');
       console.error(error);
     }
-    
   };
 
   return (

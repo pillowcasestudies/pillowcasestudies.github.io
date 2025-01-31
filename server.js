@@ -9,7 +9,8 @@ const uri = "mongodb+srv://pillowcasestudies:q8uehHZTltPIicYm@samplecluster.jb8w
 const app = express();
 app.use(cors());
 app.use(express.json());  // Middleware for parsing JSON request bodies
-const port = process.env.PORT || 3000;
+app.use(cors());
+const port = process.env.PORT || 5000; 
 
 // Get the directory name of the current module
 const __filename = fileURLToPath(import.meta.url);
@@ -33,7 +34,7 @@ const client = new MongoClient(uri, {
 });
 
 // Define the /contact POST route
-app.post('/contact', async (req, res) => {
+app.post('/', async (req, res) => {
   const { name, email, message } = req.body;
   
   if (!name || !email || !message) {
@@ -43,11 +44,13 @@ app.post('/contact', async (req, res) => {
   try {
     // Connect to MongoDB
     await client.connect();
-    const db = client.db("contact_db"); // Your database name
-    const collection = db.collection('messages'); // Your collection name
+    const db = client.db("samplecluster"); // Your database name
+    const collection = db.collection('theaters'); // Your collection name
 
     // Create a new message object to insert
     const newMessage = { name, email, message, date: new Date() };
+
+ 
 
     // Insert the new message into the MongoDB collection
     await collection.insertOne(newMessage);
@@ -74,6 +77,8 @@ async function run() {
 
 run().catch(console.dir);
 
+
+console.log("PORT:", 5000); 
 // Start the server
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
