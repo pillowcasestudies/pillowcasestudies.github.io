@@ -77,6 +77,16 @@ const Navbar = () => {
               Resume
             </Link>
                 </li>
+             <li className='py-6 text-4xl'>
+                <Link onClick={handleClick} to="testimonial" smooth={true} duration={500}>
+              Testimonials
+            </Link>
+                </li>
+                <li className='py-6 text-4xl'>
+                <Link onClick={handleClick} to="clients" smooth={true} duration={500}>
+              Notable Clients
+            </Link>
+                </li>
                 <li className='py-6 text-4xl' >
                 <Link onClick={handleClick} to="contact" smooth={true} duration={500}>
               Contact

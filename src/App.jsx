@@ -5,6 +5,9 @@ import Navbar from "./components/Navbar"
 import Resume from "./components/Resume"
 import Skills from "./components/Skills"
 import Work from "./components/Work"
+import Testimonial from "./components/Testimonial"
+import Clients from "./components/Clients"
+
 function App() {
  
 
@@ -16,8 +19,10 @@ function App() {
 <About />
 <Skills />
 <Work />
-<Contact />
+<Testimonial />
+<Clients />
 <Resume />
+<Contact />
       </div>
 
 

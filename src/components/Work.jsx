@@ -1,5 +1,10 @@
 import React from 'react'
 import WorkImg from '../assets/WorkImg.png'
+import Volailityfx from '../assets/VolatilityFX_full_screen.png'
+import FootCamp from '../assets/Footcamp.png'
+import Pretzelandcliffordstore from '../assets/Pretzelandcliffordstore.png'
+import Footcampstore from '../assets/Footcampstore.png'
+
 
 const Work = () => {
   return (
@@ -13,7 +18,7 @@ const Work = () => {
 
         <div  className='grid sm:grid-cols-2 md:grid-cols-3 gap-4'>
 {/* Container */}
-            <div style={{backgroundImage: `url(${WorkImg})`}} className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
+            <div style={{backgroundImage: `url(${Volailityfx})`}} className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
 
                 {/* Project Item */}
                 
@@ -32,7 +37,7 @@ const Work = () => {
                 </div>
             </div>
 
-            <div style={{backgroundImage: `url(${WorkImg})`}} className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
+            <div style={{backgroundImage: `url(${FootCamp})`}} className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
 
                 {/* Project Item */}
                 
@@ -54,13 +59,13 @@ const Work = () => {
 
 
 
-            <div style={{backgroundImage: `url(${WorkImg})`}} className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
+            <div style={{backgroundImage: `url(${Pretzelandcliffordstore})`}} className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
 
                 {/* Project Item */}
                 
                 <div className='opacity-0 group-hover:opacity-100'>
                     <span className='text-2xl font-bold text-white tracking-wider'>
-                    Zurk's Cookies
+                    The Pretzel and Clifford Store
                     </span>
                     <div className='pt-8 text-center'>
                             <a href="/">
@@ -76,13 +81,13 @@ const Work = () => {
 
 
 
-            <div style={{backgroundImage: `url(${WorkImg})`}} className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
+            <div style={{backgroundImage: `url(${Footcampstore})`}} className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
 
                 {/* Project Item */}
                 
                 <div className='opacity-0 group-hover:opacity-100'>
                     <span className='text-2xl font-bold text-white tracking-wider'>
-                    Spam Direct
+                    FootCamp Store
                     </span>
                     <div className='pt-8 text-center'>
                             <a href="/">
@@ -103,7 +108,7 @@ const Work = () => {
                 
                 <div className='opacity-0 group-hover:opacity-100'>
                     <span className='text-2xl font-bold text-white tracking-wider'>
-                    Pretzel and Clifford Store
+                    Macaroons Direct NYC
                     </span>
                     <div className='pt-8 text-center'>
                             <a href="/">

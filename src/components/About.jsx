@@ -1,11 +1,14 @@
 import React from 'react'
-import { FaGraduationCap, FaBriefcase, FaGlobeAmericas } from 'react-icons/fa';
+import { FaGraduationCap, FaBriefcase, FaGlobeAmericas, FaMapMarkedAlt } from 'react-icons/fa';
+import Wallsttotech from '../assets/wall_st_to_tech.webp'
+import Usasvg from '../assets/us.svg'
 
 
 const styles = {
     container: {
 
       padding: '20px',
+
       gap: '20px',
     },
     card: {
@@ -38,7 +41,7 @@ const styles = {
 const cards = [
     {
       id: 1,
-      icon: <div>  <div class="mit-logo text-6xl font-bold text-red-600">
+      icon: <div>  <div className="mit-logo text-6xl font-bold text-red-600">
       MIT
       <FaGraduationCap size={40} style={{ color: 'navy' }} />
     </div></div>,
@@ -47,13 +50,21 @@ const cards = [
     },
     {
       id: 2,
-      icon: <FaBriefcase size={40} style={{ color: 'navy' }} />,
+      icon:(   <div>
+        {/* Adding an image at the top */}
+        <div style={{ backgroundImage: `url(${Wallsttotech})`, height: '500px', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+          {/* Background image container */}
+        </div>
+        <FaBriefcase size={40} style={{ color: 'navy' }} />
+      </div>),
       title: 'Work Experience',
       description: 'Full-stack developer with a background in financial technology, entrepreneurial ventures, and coaching.',
     },
     {
       id: 3,
-      icon: <FaGlobeAmericas size={40} style={{ color: 'navy' }} />,
+      icon:   <div>       <div style={{ backgroundImage: `url(${Usasvg})`, height: '500px', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      {/* Background image container */}
+    </div><FaGlobeAmericas size={40} style={{ color: 'navy' }} /></div>,
       title: 'Nationality',
       description: 'Proud to bring diverse perspectives to my work as a U.S. citizen with global aspirations.',
     },
@@ -69,8 +80,8 @@ const About = () => {
     <div name='about' className='w-full h-screen bg-[#0a192f] text-gray-300'>
         <div className='flex flex-col justify-center items-center w-full h-full'>
             <div className='max-w-[1000px] w-full px-4 grid grid-cols-2 gap-8'>
-                <div className='sm:text-right pb-8 pl-4'>
-                    <p className='text-4xl font-bold inline border-b-4 border-pink-600'>About</p>
+                <div className='sm:text-right pb-8 pl-4 mt-[800px] '>
+                    <p className='text-4xl font-bold  inline border-b-4 border-pink-600'>About</p>
                 </div>
                 <div>
         
