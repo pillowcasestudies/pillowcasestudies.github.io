@@ -124,14 +124,14 @@ const Resume = () => {
 		<section className="my-10">
 			<h2 className="text-3xl font-semibold text-white">Education</h2>
 			<div className="mt-5">
-				<h3 className="text-xl font-bold text-gray-100">Bachelor of Science in Computer Science</h3>
-				<p className="text-sm font-light text-gray-300">University of Technology - Graduated in 2017</p>
+				<h3 className="text-xl font-bold text-gray-100"> Professional Certificate in Coding (MERN STACK)</h3>
+				<p className="text-sm font-light text-gray-300">MIT - Graduating in 2025</p>
 			</div>
 		</section>
 
 
 		<footer className="text-center mt-10">
-			<p className="text-sm font-light text-gray-300">&copy; 2024 John Doe | All Rights Reserved.</p>
+			<p className="text-sm font-light text-gray-300">&copy; 2025 Barry Weinstein | All Rights Reserved.</p>
 		</footer>
 	</div>
 
