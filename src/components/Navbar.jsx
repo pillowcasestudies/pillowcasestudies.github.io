@@ -55,6 +55,12 @@ const Navbar = () => {
               Contact
             </Link>
                 </li>
+                <li  >
+                <Link to="volunteerwork" smooth={true} duration={500}>
+              Volunteer Work
+            </Link>
+                </li>
+
             </ul>
            {/* Hamburger */}
            <div  onClick={handleClick} className='md:hidden z-10'>
@@ -100,6 +106,11 @@ const Navbar = () => {
                 <li className='py-6 text-4xl' >
                 <Link onClick={handleClick} to="contact" smooth={true} duration={500}>
               Contact
+            </Link>
+                </li>
+                <li  >
+                <Link onClick={handleClick} to="volunteerwork" smooth={true} duration={500}>
+              Volunteer Work
             </Link>
                 </li>
            </ul>

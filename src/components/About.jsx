@@ -52,13 +52,13 @@ const cards = [
       id: 2,
       icon:(   <div>
         {/* Adding an image at the top */}
-        <div style={{ backgroundImage: `url(${Wallsttotech})`, height: '500px', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div style={{ backgroundImage: `url(${Wallsttotech})`, height: '300px', backgroundSize: 'cover', backgroundPosition: 'center' }}>
           {/* Background image container */}
         </div>
         <FaBriefcase size={40} style={{ color: 'navy' }} />
       </div>),
       title: 'Work Experience',
-      description: 'Full-stack developer with a background in financial technology, entrepreneurial ventures, and coaching.',
+      description: 'Full Stack Developer with Experience in Multiple Frameworks and industries.',
     },
     {
       id: 3,
@@ -66,7 +66,7 @@ const cards = [
       {/* Background image container */}
     </div><FaGlobeAmericas size={40} style={{ color: 'navy' }} /></div>,
       title: 'Nationality',
-      description: 'Proud to bring diverse perspectives to my work as a U.S. citizen with global aspirations.',
+      description: 'A U.S. citizen with global aspirations.',
     },
     
   ];
@@ -77,11 +77,11 @@ const cards = [
 const About = () => {
     
   return (
-    <div name='about' className='w-full h-screen bg-[#0a192f] text-gray-300'>
-        <div className='flex flex-col justify-center items-center w-full h-full'>
-            <div className='max-w-[1000px] w-full px-4 grid grid-cols-2 gap-8'>
-                <div className='sm:text-right pb-8 pl-4 mt-[800px] '>
-                    <p className='text-4xl font-bold  inline border-b-4 border-pink-600'>About</p>
+    <div name='about' className='w-full bg-[#0a192f] text-gray-300'>
+        <div className='flex flex-col justify-center items-center w-full'>
+            <div className='max-w-[1000px] w-full '>
+                <div className='sm:text-left pb-8 pl-4 '>
+                    <p className='text-4xl font-bold  inline border-b-4  border-red-600'>About</p>
                 </div>
                 <div>
         

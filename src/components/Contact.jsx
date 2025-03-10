@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect  } from 'react';
 import axios from 'axios';
 
 const Contact = () => {
@@ -7,6 +7,31 @@ const Contact = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [status, setStatus] = useState(''); // To display status messages (success/error)
+
+  const [messages, setMessages] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchMessages = async () => {
+      try {
+        const response = await axios.get('http://localhost:5000/api/messages');
+        console.log("Fetched Messages:", response); // Log full response
+  
+        // Check if data is valid JSON before setting state
+        if (response && response.data && Array.isArray(response.data)) {
+          setMessages(response.data);
+        } else {
+          console.error("Invalid JSON response:", response);
+          setMessages([]);
+        }
+      } catch (error) {
+        console.error('Error fetching messages:', error);
+      }
+    };
+  
+    fetchMessages();
+  }, []);
 
   // Step 2: Handle form input changes
   const handleNameChange = (e) => setName(e.target.value);
@@ -25,17 +50,12 @@ const Contact = () => {
 
     try {
       // Send form data to the backend using axios
-      axios.post('http://localhost:5000/', {
-        name: 'John pilkritson',
-        email: 'john@example.com',
-        message: 'Hello, this is a message.'
-      })
-      .then(response => {
-        console.log('Success:', response.data);
-      })
-      .catch(error => {
-        console.error('Error:', error.response ? error.response.data : error.message);
+      const response = await axios.post('http://localhost:5000/api/contact', {
+        name,
+        email,
+        message,
       });
+
       // If successful, reset the form and show success message
       setName('');
       setEmail('');
@@ -97,6 +117,10 @@ const Contact = () => {
           Let's Collaborate
         </button>
       </form>
+
+
+      
+
     </div>
   );
 }

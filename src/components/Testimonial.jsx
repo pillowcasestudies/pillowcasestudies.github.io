@@ -10,21 +10,21 @@ const Testimonial = () => {
         {
           name: "John Taylor",
           logo: JohnTaylor,
-          description: "If you have the brains, this gives you live eyes and ears. Worth at least a 2X on performance.",
-          testimonyholderdescription: "If you have the brains, this gives you live eyes and ears. Worth at least a 2X on performance."
+          description: "'If you have the brains, this gives you live eyes and ears. Worth at least a 2X on performance.'",
+          testimonyholderdescription: "John was the Founder of 14 Billion AUM Hedge Fund: FX Concepts."
         },
         {
-          name: "Jens Norvisk",
+          name: "Lars Theussen",
           logo: Nomura,
-          description: "Implemented a smart trading tips system for their FX Options desk which led to a multi-million dollar FX deal .",
-          testimonyholderdescription: "If you have the brains, this gives you live eyes and ears. Worth at least a 2X on performance."
+          description: "'Barry developed a great decision support tool for both buyside and sell side traders. Recommend taking a look.'",
+          testimonyholderdescription: "Former Chief Dealer FX for both Nordea and Danske Bank."
 
         },
         {
           name: "Gideon Hyams",
           logo: MoneyCorp,
-          description: "Designed and built a custom risk management system in Ruby on Rails for MoneyCorp Client Presentations.",
-           testimonyholderdescription: "If you have the brains, this gives you live eyes and ears. Worth at least a 2X on performance."
+          description: "'Barry created an outstanding tool which is extraordinarily useful for trading FX Options.'",
+           testimonyholderdescription: "In a stellar career at UBS he was the youngest banker to be appointed Director in FX Derivatives."
 
         }
       ];
@@ -52,8 +52,11 @@ const Testimonial = () => {
         className="h-20 mb-4 object-contain"
       />
       <h3 className="text-xl font-semibold mb-2">{client.name}</h3>
-      <p className="text-gray-600 text-center">{client.description}</p>
-      <p className="text-gray-600 text-center">{client.testimonyholderdescription}</p>
+      <ul>
+      <li className="text-black-600 text-2xl text-center">{client.description}</li>
+      <li><br></br></li>
+      <li className="text-gray-600 text-center">{client.testimonyholderdescription}</li>
+      </ul>
       </motion.div>
     
   ))}

@@ -1,5 +1,6 @@
 {
   "name": "portfolio-app",
+  "homepage": "https://pillowcasestudies.github.io/pillowcasestudies.github.io",
   "proxy": "http://localhost:5000",
   "private": true,
   "version": "0.0.0",
@@ -8,7 +9,9 @@
     "build": "vite build",
     "start": "node server.js",
     "dev": "vite",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@heroku-cli/command": "^11.4.0",
