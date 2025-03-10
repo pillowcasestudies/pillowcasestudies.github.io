@@ -10,7 +10,7 @@ export default function Home() {
 
   return (
     <Wrapper>
-      <Map />
+      <Map pickupCoordinates={""} dropoffCoordinates={""} />
       <ActionItems>
         <Header>
         <Weather /> 
