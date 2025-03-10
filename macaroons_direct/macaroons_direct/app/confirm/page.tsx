@@ -1,5 +1,5 @@
 "use client";
-
+import React, {Suspense} from 'react';
 import { FC, useEffect, useState } from 'react';
 import tw from "tailwind-styled-components";
 import Map from '../components/Map';
@@ -11,7 +11,15 @@ import Link from 'next/link';
 mapboxgl.accessToken =
 "pk.eyJ1IjoicGlsbG93Y2FzZXN0dWRpZXMiLCJhIjoiY203MmR6cGRxMDltNDJqcHMzMG5ucHgzYiJ9.yggrLELPSXEzKwuldUFdYQ";
 
-const ConfirmPage: FC = () => {
+const ConfirmPage: React.FC = () => {
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <ConfirmContent />
+        </Suspense>
+    );
+};
+
+const ConfirmContent: FC = () => {
     const router = useRouter();
     const searchParams = useSearchParams();
     const pickup = searchParams.get("pickup");
