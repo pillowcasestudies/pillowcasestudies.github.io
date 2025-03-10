@@ -22,7 +22,7 @@ const ConfirmPage: FC = () => {
 
 
 
-    const getDropoffCoordinates = (dropoff) => {
+    const getDropoffCoordinates = (dropoff: string) => {
 
 
 
@@ -38,7 +38,7 @@ const ConfirmPage: FC = () => {
         .catch(error => console.error("Error fetching dropoff coordinates:", error));
     };
 
-    const getPickupCoordinates = (pickup) => {
+    const getPickupCoordinates = (pickup: string) => {
 
 
         fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${pickup}.json?${new URLSearchParams({
