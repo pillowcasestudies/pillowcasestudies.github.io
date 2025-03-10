@@ -55,7 +55,7 @@ const ConfirmPage: FC = () => {
 
     useEffect(() => {
        if (pickup)     getPickupCoordinates(pickup);
-        getDropoffCoordinates(dropoff);
+       if (dropoff)     getDropoffCoordinates(dropoff);
     }, [pickup, dropoff]);
 
     return (
