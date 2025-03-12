@@ -1,4 +1,4 @@
-# Pillow Case Studies Portfolio
+# Barry Weinstein Professional Developer Portfolio
 
 Welcome to my portfolio page! This page is graded course work for the MIT MERN Stack Professional Certification. This website showcases my work, projects, and case studies related to my personal and professional development. It is built using **GitHub Pages**, making it accessible and easy to update directly through GitHub repositories.
 
